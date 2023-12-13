@@ -1,13 +1,98 @@
-/*  
 
-Style guide 
- Background : #EDE6D8 
- Primary color: #AA9C81
- Secondary color: #3B4441 
+/* Style guide
+Background: #EDE6D8
+Primary color: #AA9C81
+Secondary color: #3B4441
+*/
 
- */
+body {
+   margin: 0;
+   padding: 0;
+}
+
+.content {
+   display: flex;
+   justify-content: space-between; /* separate the two sides */
+   align-items: center; /*center vertically*/
+}
+
+.image-side {
+   background-image: url("pot.jpg");
+   background-size: cover;
+   flex: 1; /* Let it take up all available space in the flex container */
+   display: flex;
+   flex-direction: column;
+   align-items: center; /* Center the content horizontally */
+   justify-content: center; /* Center the content vertically */
+   height: 100vh;
+}
 
 
- :form-side {
-    background-color: #EDE6D8 ;
- }
+
+.banner img {
+   max-width: 100%; /* Ensure the logo doesn't overflow its container */
+   background: rgba(0, 0, 0, 0.5); /* half black background */
+   -webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
+           filter: invert(100%); /*this and the line above it invert the svg file from black to white*/
+}
+
+.form-side {
+   flex: 1; /* Let it take up all available space in the flex container */
+   background-color: #EDE6D8;
+   display: flex;
+   justify-content: center; /* Center the content horizontally */
+   align-items: center; /* Center the content vertically */
+   height: 100vh;
+   text-align: center; /* center text */
+   flex-direction: column;
+}
+
+h2 {
+   margin-bottom: 20px;
+}
+
+.form-group {
+   margin-bottom: 20px;
+}
+
+
+label {
+   display: block;
+   font-weight: bold;
+   margin-bottom: 5px;
+}
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+   background-color: #AA9C81;
+   color: white;
+   border: none;
+   padding: 10px 20px;
+   border-radius: 4px;
+   font-size: 16px;
+   cursor: pointer;
+}
+
+button:hover {
+   background-color: #3B4441;
+}
+
+.name-group {
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+   margin-bottom: 20px;
+}
+
+.name-group .form-group {
+   width: 48%; /* Adjust the width as needed */
+   margin-right: 2%;
+}
+
