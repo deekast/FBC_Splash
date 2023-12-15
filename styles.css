@@ -22,7 +22,7 @@ body {
    flex: 1; /* Let it take up all available space in the flex container */
    display: flex;
    flex-direction: column;
-   align-items: center; /* Center the content horizontally */
+   align-items: stretch; /* Center the content horizontally */
    justify-content: center; /* Center the content vertically */
    height: 100vh;
 }
@@ -30,8 +30,9 @@ body {
 
 
 .banner img {
-   max-width: 100%; /* Ensure the logo doesn't overflow its container */
-   background: rgba(0, 0, 0, 0.5); /* half black background */
+   width: 100%; /* Ensure the logo doesn't overflow its container */
+   max-height: 50vh;
+   background: rgba(255, 255, 255, 0.5); /* half black background */
    -webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
            filter: invert(100%); /*this and the line above it invert the svg file from black to white*/
 }
